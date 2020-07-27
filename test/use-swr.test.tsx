@@ -1120,7 +1120,7 @@ describe('useSWR - local mutation', () => {
     cache.set('dynamic-15', 'cached data')
     const callback = jest.fn()
     await mutate('dynamic-15', callback)
-    expect(callback).toHaveBeenCalledWith('cached data')
+    expect(callback).toHaveBeenCalledWith('cached data', 'dynamic-15')
   })
 
   it('should return results of the mutation', async () => {
